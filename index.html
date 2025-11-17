@@ -1,10 +1,150 @@
 <!DOCTYPE HTML>
 <html lang="en">
    <head>
-       <title>Page title shown in window title</title>
+       <title>Fast Burgers</title>
        <meta charset="utf-8"/>
    </head>
    <body>
+        <header>
+            <h1>Welcome to Fast Burgers!</h1>
+        </header>
+        <main>  
+            <section>   
+                <h2>Fast Burgers menu</h2>
+                <p>Choose from our delicious selection of burgers below:</p>
 
+                <div style="display: inline-block"> 
+                <h3>The Fastest Burger</h3>
+                <img src="https://simplehomeedit.com/wp-content/uploads/2024/03/Homemade-Beef-Burgers-4.webp" title="Fastest Burger" style="width: 200px">
+                <ul>
+                    <li>Fast patty</li>
+                    <li>Lettuce</li>
+                    <li>Tomato</li>
+                    <li>Cheese</li>
+                    <li>Pickles</li>
+                    <li>Fast bun</li>
+                    <li>Fast sauce</li>
+    
+                </ul>
+
+                <dl>
+                    <dt>Fast patty</dt>
+                    <dd>Contains beef</dd>
+                    <dt>Fast bun</dt>
+                    <dd>Contains gluten</dd>
+                    <dt>Fast sauce</dt>
+                    <dd>Contains lactose</dd>
+                </dl>
+
+                </div>
+
+                <div style="display: inline-block">
+                <h3>The Not So Fast Burger</h3>
+                <img src="https://www.thecookingcollective.com.au/wp-content/uploads/2025/03/chicken-burgers-5-of-14.jpg" title="Not So Fast Burger" style="width: 200px">
+                <ul>
+                    <li>Not So Fast patty</li>
+                    <li>Lettuce</li>                    
+                    <li>Pickles</li>
+                    <li>Not so Fast bun</li>
+                    <li>Not So Fast sauce</li>
+    
+                </ul>
+
+                <dl>
+                    <dt>Not So Fast patty</dt>
+                    <dd>Contains chicken</dd>
+                    <dt>Not So Fast bun</dt>
+                    <dd>Contains gluten</dd>
+                    <dt>Not So Fast sauce</dt>
+                    <dd>Contains lactose</dd>
+                </dl>
+
+                </div>
+
+                <div style="display: inline-block"> 
+                <h3>The Slow Burger</h3>
+                <img src="https://fullofplants.com/wp-content/uploads/2023/08/high-protein-grillable-vegan-burgers-with-seitan-soy-curls-22.jpg" title="Slow Burger" style="width: 200px">
+                <ul>
+                    <li>Slow patty</li>
+                    <li>Lettuce</li>
+                    <li>Slow bun</li>
+                    <li>Slow sauce</li>
+    
+                </ul>
+
+                <dl>
+                    <dt>Slow patty</dt>
+                    <dd>Vegan, no lactose, no gluten</dd>
+                    <dt>Slow bun</dt>
+                    <dd>Vegan, no lactose, no gluten</dd>
+                    <dt>Slow sauce</dt>
+                    <dd>Vegan, no lactose, no gluten</dd>
+                </dl>
+
+                </div>
+
+            </section>
+
+            <section id="contact"> 
+                <h2>Delivery information</h2>
+                <p>Please fill in your delivery information here</p>
+                <form>
+                    <p>
+                        <label for ="name">Full Name</label><br>
+                        <input type="text" id="fullname" name="fn" required="required" placeholder="First and Last Name">
+                    </p>
+                    
+                    <p>
+                        <label for ="email">E-mail</label><br>
+                        <input type="email" id="email" name="em" required="required" placeholder="E-mail address">
+                    </p>
+                    <p>
+                        <label for ="Street">Address</label><br>
+                        <input type="text" id="streetname" name="sn" required="required" placeholder="Street name">
+                    </p>
+                    <p>
+                        <label for ="housenumber">House number</label><br>
+                        <input type="number" id="housenumber" name="hn" required="required" placeholder="House number">
+                    </p>
+                    <p>
+                        <label for="payment method">Payment method</label>
+                        <select id="payment method" name="pm">                            
+                            <option selected="selected">Debit card</option>
+                            <option>Credit card</option>
+                            <option>Swish</option>
+                            <option>Cash</option>
+                            <option>Klarna</option>                        
+                        </select>
+                    </p>
+                    <p>
+                        <label for="gender">Gender</label><br>
+
+                        <input type="radio" id="Do not wish to provide" name="gender" value="Do not wish to provide" checked="checked"> 
+                        <label for="Do not wish to provide">Do not wish to provide</label><br>
+
+                        <input type="radio" id="Female" name="gender" value="Female">
+                        <label for="Female">Female</label><br>
+
+                        <input type="radio" id="Male" name="gender" value="Male"> 
+                        <label for="Male">Male</label><br>
+
+                        <input type="radio" id="Non-binary" name="gender" value="Non-binary">
+                        <label for="Non-binary">Non-binary</label><br>
+
+                    </p>
+                    
+                </form>
+            </section>
+            <button type="submit" style="border:None;">
+                <img src="https://www.freeiconspng.com/uploads/submit-button-png-9.png" style="width:100px">
+            </button>
+            
+        </main>
+
+        <hr>
+
+        <footer> 
+            <p>© 2025 Fast Burgers</p>
+        </footer>
    </body>
 </html>
