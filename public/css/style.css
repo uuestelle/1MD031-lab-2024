@@ -4,11 +4,12 @@ body {
     font-family: "Times New Roman", serif;
 }
 
-header {
+#headerContent {
     margin: 20px;
     height: 200px;
     overflow:hidden;
 }
+
 #headerimage {
     opacity: 0.5;
     width: 100%;
@@ -23,6 +24,7 @@ header h1 {
     padding: 60px 20px 20px 20px;
     margin-top: -990px;
 }
+
 h1 {
     font-family: 'Agbalumo';
     font-size: 36pt;

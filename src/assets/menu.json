@@ -1,21 +1,22 @@
 [{
-    "name": "Veggie Bliss", 
-    "kCal": 500, 
-    "url": "https://images-bonnier.imgix.net/files/ifo/production/20220412084608/Kødfri-burger-1.jpg?auto=compress,format&w=1024%201024w",
-    "lactose": false, 
-    "gluten": false
+    "name": "The fastest burger", 
+    "kCal": 800, 
+    "image": "https://simplehomeedit.com/wp-content/uploads/2024/03/Homemade-Beef-Burgers-4.webp",
+    "ingredients": ["Fast patty", "Lettuce", "Tomato", "Cheese", "Pickles", "Fast bun", "Fast sauce"], 
+    "allergens": ["Beef", "Gluten", "Lactose"]
 },
 {
-    "name": "Veggie Bliss", 
-    "kCal": 500, 
-    "url": "https://images-bonnier.imgix.net/files/ifo/production/20220412084608/Kødfri-burger-1.jpg?auto=compress,format&w=1024%201024w",
-    "lactose": false, 
-    "gluten": false
+    "name": "The not so fast burger", 
+    "kCal": 600, 
+    "image": "https://www.thecookingcollective.com.au/wp-content/uploads/2025/03/chicken-burgers-5-of-14.jpg",
+    "ingredients": ["Not so fast patty", "Lettuce", "Pickles", "Not so fast bun", "Not so fast sauce"], 
+    "allergens": ["Chicken", "Gluten", "Lactose"]
+    
 },
 {
-    "name": "Veggie Bliss", 
+    "name": "The slow burger", 
     "kCal": 500, 
-    "url": "https://images-bonnier.imgix.net/files/ifo/production/20220412084608/Kødfri-burger-1.jpg?auto=compress,format&w=1024%201024w",
-    "lactose": false, 
-    "gluten": false
+    "image": "https://fullofplants.com/wp-content/uploads/2023/08/high-protein-grillable-vegan-burgers-with-seitan-soy-curls-22.jpg",
+    "ingredients": ["Slow patty", "Lettuce", "Slow bun", "Slow sauce"], 
+    "allergens": ["Vegan", "No lactose", "No gluten"]
 }]

@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html lang="en">
+   <head>
+       <title>Fast Burgers</title>
+       <meta charset="utf-8"/>
+       <link rel="stylesheet" type="text/css" href="/Users/estellecorneman/Desktop/1MD031-lab-2024/public/css/style.css">
+   </head>
+   <body>
+        <header>
+            <div id="headerContent">
+                <img src="https://res.cloudinary.com/gordonramsay/image/upload/c_fill,w_650,h_460,q_auto,f_auto/Gordon%20Ramsay%20Burger%20US/locations/Burger_Location_Tile_2_wl3hqe" 
+                title="Header image" id="headerimage">
+                <h1>Welcome to Fast Burgers!</h1>
+            </div>
+        </header>
+        <main>  
+            <section class="burgermenu">   
+                <h2>Fast Burgers menu</h2>
+                <p>Choose from our delicious selection of burgers below:</p>
+
+                <div class="menuitems">
+
+                    <div style="display: inline-block" class="burger fast"> 
+                    <h3>The Fastest Burger</h3>
+                    <img src="https://simplehomeedit.com/wp-content/uploads/2024/03/Homemade-Beef-Burgers-4.webp" title="Fastest Burger" style="width: 200px">
+                    <ul>
+                        <li>Fast patty</li>
+                        <li>Lettuce</li>
+                        <li>Tomato</li>
+                        <li>Cheese</li>
+                        <li>Pickles</li>
+                        <li>Fast bun</li>
+                        <li>Fast sauce</li>
+        
+                    </ul>
+
+                    <dl>
+                        <dt>Fast patty</dt>
+                        <dd><span class="allergen">Contains beef</span></dd>
+                        <dt>Fast bun</dt>
+                        <dd><span class="allergen">Contains gluten</span></dd>
+                        <dt>Fast sauce</dt>
+                        <dd><span class="allergen">Contains lactose</span></dd>
+                    </dl>
+
+                    </div>
+
+                    <div style="display: inline-block" class="burger notsofast">
+                    <h3>The Not So Fast Burger</h3>
+                    <img src="https://www.thecookingcollective.com.au/wp-content/uploads/2025/03/chicken-burgers-5-of-14.jpg" title="Not So Fast Burger" style="width: 200px">
+                    <ul>
+                        <li>Not So Fast patty</li>
+                        <li>Lettuce</li>                    
+                        <li>Pickles</li>
+                        <li>Not so Fast bun</li>
+                        <li>Not So Fast sauce</li>
+        
+                    </ul>
+
+                    <dl>
+                        <dt>Not So Fast patty</dt>
+                        <dd><span class="allergen">Contains chicken</span></dd>
+                        <dt>Not So Fast bun</dt>
+                        <dd><span class="allergen">Contains gluten</span></dd>
+                        <dt>Not So Fast sauce</dt>
+                        <dd><span class="allergen">Contains lactose</span></dd>
+                    </dl>
+
+                    </div>
+
+                    <div style="display: inline-block" class="burger slow"> 
+                    <h3>The Slow Burger</h3>
+                    <img src="https://fullofplants.com/wp-content/uploads/2023/08/high-protein-grillable-vegan-burgers-with-seitan-soy-curls-22.jpg" title="Slow Burger" style="width: 200px">
+                    <ul>
+                        <li>Slow patty</li>
+                        <li>Lettuce</li>
+                        <li>Slow bun</li>
+                        <li>Slow sauce</li>
+        
+                    </ul>
+
+                    <dl>
+                        <dt>Slow patty</dt>
+                        <dd><span class="allergen">Vegan, no lactose, no gluten</span></dd>
+                        <dt>Slow bun</dt>
+                        <dd><span class="allergen">Vegan, no lactose, no gluten</span></dd>
+                        <dt>Slow sauce</dt>
+                        <dd><span class="allergen">Vegan, no lactose, no gluten</span></dd>
+                    </dl>
+
+                    </div>
+                
+                </div>
+
+            </section>
+
+            <section class="contact"> 
+                <h2>Delivery information</h2>
+                <p>Please fill in your delivery information here</p>
+                <form>
+                    <p>
+                        <label for ="name">Full Name</label><br>
+                        <input type="text" id="fullname" name="fn" required="required" placeholder="First and Last Name">
+                    </p>
+                    
+                    <p>
+                        <label for ="email">E-mail</label><br>
+                        <input type="email" id="email" name="em" required="required" placeholder="E-mail address">
+                    </p>
+                    <p>
+                        <label for ="Street">Address</label><br>
+                        <input type="text" id="streetname" name="sn" required="required" placeholder="Street name">
+                    </p>
+                    <p>
+                        <label for ="housenumber">House number</label><br>
+                        <input type="number" id="housenumber" name="hn" required="required" placeholder="House number">
+                    </p>
+                    <p>
+                        <label for="payment method">Payment method</label>
+                        <select id="payment method" name="pm">                            
+                            <option selected="selected">Debit card</option>
+                            <option>Credit card</option>
+                            <option>Swish</option>
+                            <option>Cash</option>
+                            <option>Klarna</option>                        
+                        </select>
+                    </p>
+                    <p>
+                        <label for="gender">Gender</label><br>
+
+                        <input type="radio" id="Do not wish to provide" name="gender" value="Do not wish to provide" checked="checked"> 
+                        <label for="Do not wish to provide">Do not wish to provide</label><br>
+
+                        <input type="radio" id="Female" name="gender" value="Female">
+                        <label for="Female">Female</label><br>
+
+                        <input type="radio" id="Male" name="gender" value="Male"> 
+                        <label for="Male">Male</label><br>
+
+                        <input type="radio" id="Non-binary" name="gender" value="Non-binary">
+                        <label for="Non-binary">Non-binary</label><br>
+
+                    </p>
+                    
+                </form>
+            </section>
+            <button type="submit" style="border:None;" id="submitbutton">
+                <img src="https://www.freeiconspng.com/uploads/submit-button-png-9.png" style="width:100px">
+            </button>
+            
+        </main>
+
+        <hr>
+
+        <footer> 
+            <p>© 2025 Fast Burgers</p>
+        </footer>
+   </body>
+</html>
