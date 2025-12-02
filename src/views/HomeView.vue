@@ -36,14 +36,7 @@
                         <label for ="email">E-mail</label><br>
                         <input type="email" id="email" v-model="customerEmail" required="required" placeholder="E-mail address">
                     </p>
-                    <p>
-                        <label for ="Street">Address</label><br>
-                        <input type="text" id="streetname" v-model="customerStreet" required="required" placeholder="Street name">
-                    </p>
-                    <p>
-                        <label for ="housenumber">House number</label><br>
-                        <input type="number" id="housenumber" v-model="customerHouseNumber" required="required" placeholder="House number">
-                    </p>
+                    
                     <p>
                         <label for="payment method">Payment method</label>
                         <select id="payment method" v-model="paymentMethod">                            
@@ -57,16 +50,16 @@
                     <p>
                         <label for="gender">Gender</label><br>
 
-                        <input type="radio" id="Do not wish to provide" v-model="gender" value="Do not wish to provide" checked="checked"> 
+                        <input type="radio" id="Do not wish to provide" v-model="customerGender" value="Do not wish to provide" checked="checked"> 
                         <label for="Do not wish to provide">Do not wish to provide</label><br>
 
-                        <input type="radio" id="Female" v-model="gender" value="Female">
+                        <input type="radio" id="Female" v-model="customerGender" value="Female">
                         <label for="Female">Female</label><br>
 
-                        <input type="radio" id="Male" v-model="gender" value="Male"> 
+                        <input type="radio" id="Male" v-model="customerGender" value="Male"> 
                         <label for="Male">Male</label><br>
 
-                        <input type="radio" id="Non-binary" v-model="gender" value="Non-binary">
+                        <input type="radio" id="Non-binary" v-model="customerGender" value="Non-binary">
                         <label for="Non-binary">Non-binary</label><br>
 
                     </p>
@@ -78,7 +71,7 @@
                 <p>Click on the map to set delivery location:</p>
 
                 <div id="mapWrapper">
-                  <div id="map" @click="addOrder">
+                  <div id="map" @click="setLocation">
                     <div id="target"
                       :style="{ left: location.x + 'px', top: location.y + 'px'}">
                       📍
@@ -135,10 +128,8 @@ export default {
       burgers: menu,
       customerName: '',
       customerEmail: '',
-      customerStreet: '',
-      customerHouseNumber: null,
       paymentMethod: 'Debit card',
-      gender: 'Do not wish to provide',
+      customerGender: 'Do not wish to provide',
       orderedBurgers: {},
       location: { x: 0,
                   y: 0
@@ -149,7 +140,7 @@ export default {
     getOrderNumber: function () {
       return Math.floor(Math.random()*100000);
     },
-    addOrder: function (event) {
+    setLocation: function (event) {
       var offset = {x: event.currentTarget.getBoundingClientRect().left +10,
                     y: event.currentTarget.getBoundingClientRect().top +10};
 
@@ -159,21 +150,26 @@ export default {
                     this.location.x = x;
                     this.location.y = y;
 
-      socket.emit("addOrder", { orderId: this.getOrderNumber(),
-                                details: { x, y },
-                                orderItems: this.orderedItems
-                              }
-                 );
+      
     }
     ,
     submitOrder: function () {
       console.log("Order submitted:");
       console.log("Name: " + this.customerName);
       console.log("E-mail: " + this.customerEmail);
-      console.log("Street: " + this.customerStreet);
-      console.log("House number: " + this.customerHouseNumber);
+      console.log("Location: " + this.location);
       console.log("Payment method: " + this.paymentMethod);
       console.log("Gender: " + this.gender);
+      console.log("Ordered items: " + this.orderedBurgers);
+      socket.emit("addOrder", { orderId: this.getOrderNumber(),
+                                details: this.location,
+                                orderItems: this.orderedBurgers,
+                                personalInfo: { name: this.customerName,
+                                                email: this.customerEmail,
+                                                gender: this.customerGender,
+                                                paymentMethod: this.paymentMethod,}
+                              }
+                 );
     },
 
     addToOrder: function (event) {
@@ -227,20 +223,14 @@ export default {
       color: #fff;
   }
 
-  .burger {
-      background-color: #444;
-      border-radius: 5px;
-      padding: 20px;
-      font-size: 100%;
-  }
 
   .allergen {
       font-weight: bold;
   }
 
   .burgermenu {
-      background-color: white;
-      color: black;
+      background-color: black;
+      color: white;
       border: 3px dashed white;
   }
 

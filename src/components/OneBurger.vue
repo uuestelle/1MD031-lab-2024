@@ -69,26 +69,16 @@ export default {
   .menuitems {
       display: grid;
       grid-gap: 20px;
-      grid-template-columns: 1fr 1fr 1fr;
-      color: #fff;
+      grid-template-columns: 33% 33% 33%;
+      margin: 20px;
+      color: white;
   }
 
-  .burger {
-      background-color: #444;
-      border-radius: 5px;
-      padding: 20px;
-      font-size: 100%;
-  }
 
   .allergen {
       font-weight: bold;
   }
 
-  .burgermenu {
-      background-color: white;
-      color: black;
-      border: 3px dashed white;
-  }
 
   .burgermenu p {
       margin-left: 10px;
